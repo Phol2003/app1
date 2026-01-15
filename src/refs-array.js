@@ -21,7 +21,7 @@ const onClickButton = (i) => {
         }
         const tableStyles = { margin: 'auto', marginTop: 30 }
         return (
-        <table ref={table} border="1" cellPadding={5} style={tableStyl} >
+        <table ref={table} border="1" cellPadding={5} style={tableStyles} >
         <tr><th>Product</th><th>Price</th><th>Delete</th></tr>
         {
             data.map((item, i) => {
