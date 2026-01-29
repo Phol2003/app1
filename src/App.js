@@ -1,14 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import Button from './class-components';
-import { Calculator2 } from './Caculator';
-import EventData2 from './even-data'
-import RefsArray from './refs-array';
-import MessageBox from './state-func';
+import React from 'react'
+import { userContext } from './context'
+import Header2 from './context-header2'
+import Content2 from './context-content2'
 
-function App() {
-return <MessageBox/>
+export default function App() {
+  let [user, setUser] = React.useState('')
+
+  return (
+    <userContext.Provider value={[user, setUser]}>
+      <Header2 />
+      <Content2 />
+    </userContext.Provider>
+  )
 }
- 
-export default App;
